@@ -27,3 +27,30 @@
 }*/
 
 //using recursion
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {1, 2, 3, 4, 5};
+
+        System.out.println("Original Array:");
+        printArray(arr, 0);  // Start from the first element
+
+        System.out.println("\nArray Printed Backward:");
+        printArrayBackward(arr, arr.length - 1);  // Start from the last element
+    }
+
+    // Method to print the array forward using recursion
+    static void printArray(int[] arr, int index) {
+        if (index < arr.length) {
+            System.out.print(arr[index] + " ");
+            printArray(arr, index + 1);
+        }
+    }
+
+    // Method to print the array backward using recursion
+    static void printArrayBackward(int[] arr, int index) {
+        if (index >= 0) {
+            System.out.print(arr[index] + " ");
+            printArrayBackward(arr, index - 1);
+        }
+    }
+}
